@@ -1,0 +1,913 @@
+swagger: 2.0
+info:
+  version: 1.0
+  title: Postman Echo
+  description: >-
+    Postman Echo is service you can use to test your REST clients and make sample API calls. It provides endpoints for `GET`, `POST`, `PUT`, various auth mechanisms and other utility endpoints.
+
+
+    The documentation for the endpoints as well as example responses can be found at [https://echo.getpostman.com](https://echo.getpostman.com?source=echo-collection-app-onboarding)
+  license:
+    name: MIT
+    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
+host: echo.getpostman.com
+basePath: /
+securityDefinitions:
+  auth:
+    type: basic
+    x-testValue: []
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /digest-auth:
+    get:
+      description: 'TODO: Add Description'
+      summary: DigestAuth Success
+      tags:
+      - 'Auth: Digest'
+      operationId: DigestAuth Success
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /digest-auth
+          headers:
+            Authorization: Digest username="postman", realm="Users", nonce="ni1LiL0O37PRRhofWdCLmwFsnEtH1lew", uri="/digest-auth", response="254679099562cf07df9b6f5d8d15db44", opaque=""
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 42
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 29 Oct 2015 06:17:51 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"authenticated":true}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: DigestAuth Success
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /basic-auth:
+    get:
+      description: 'TODO: Add Description'
+      summary: Basic Auth
+      tags:
+      - 'Auth: Others'
+      operationId: Basic Auth
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /basic-auth
+          headers:
+            Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 42
+            Content-Type: application/json; charset=utf-8
+            Date: Sat, 31 Oct 2015 06:38:25 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"authenticated":true}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Basic Auth
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /oauth1:
+    get:
+      description: 'TODO: Add Description'
+      summary: OAuth1.0 Verify Signature
+      tags:
+      - 'Auth: Others'
+      operationId: OAuth1.0 Verify Signature
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /oauth1
+          headers:
+            Authorization: OAuth oauth_consumer_key="RKCGzna7bv9YD57c",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1442394747",oauth_nonce="UIGipk",oauth_version="1.0",oauth_signature="CaeyGPr2mns1WCq4Cpm5aLvz6Gs="
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 95
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 31 Mar 2016 11:06:58 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"status":"pass","message":"OAuth-1.0a signature verification was successful"}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: OAuth1.0 Verify Signature
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /auth/hawk:
+    get:
+      description: 'TODO: Add Description'
+      summary: Hawk Auth
+      tags:
+      - 'Auth: Others'
+      operationId: Hawk Auth
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /auth/hawk
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Type: application/json
+            Date: Thu, 31 Mar 2016 11:12:16 GMT
+            Server: nginx/1.6.2
+            Server-Authorization: Hawk mac="vRrUzDdcHu2NaNts/r4zg2xmXMdX8wPiTGTM398BDRg=", hash="qmtflETMybaZiOQ2dLT17yiRunFT5OCIxZRZ0boQaiE="
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+            transfer-encoding: chunked
+          body: '{"status":"pass","message":"Hawk Authentication successful"}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Hawk Auth
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /cookies/set:
+    get:
+      description: 'TODO: Add Description'
+      summary: Set Cookies
+      tags:
+      - Cookies
+      operationId: Set Cookies
+      produces:
+      - application/json
+      parameters:
+      - name: foo1
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: foo2
+        in: query
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /cookies/set?foo1=bar1&foo2=bar
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 51
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 29 Oct 2015 06:15:28 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"cookies":{"foo1":"bar","foo2":"bar"}}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Set Cookies
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /cookies/delete:
+    get:
+      description: 'TODO: Add Description'
+      summary: Delete Cookies
+      tags:
+      - Cookies
+      operationId: Delete Cookies
+      produces:
+      - application/json
+      parameters:
+      - name: foo1
+        in: query
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /cookies:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get Cookies
+      tags:
+      - Cookies
+      operationId: Get Cookies
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /cookies
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 46
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 29 Oct 2015 06:16:29 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"cookies":{"foo2":"bar"}}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Cookies
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /headers:
+    get:
+      description: 'TODO: Add Description'
+      summary: Request Headers
+      tags:
+      - Headers
+      operationId: Request Headers
+      produces:
+      - application/json
+      parameters:
+      - name: my-sample-header
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /headers
+          headers:
+            my-sample-header: Lorem ipsum dolor sit amet
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 342
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 31 Mar 2016 11:14:00 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"headers":{"host":"echo.getpostman.com","accept":"*/*","accept-encoding":"gzip, deflate, sdch","accept-language":"en-US,en;q=0.8","cache-control":"no-cache","my-sample-header":"Lorem ipsum dolor sit amet","postman-token":"3c8ea80b-f599-fba6-e0b4-a0910440e7b6","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36","x-forwarded-port":"443","x-forwarded-proto":"https"}}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Request Headers
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /response-headers:
+    get:
+      description: 'TODO: Add Description'
+      summary: Response Headers
+      tags:
+      - Headers
+      operationId: Response Headers
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: test
+        in: query
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /response-headers?Content-Type=text/html&test=response_headers
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 71
+            Content-Type: text/html; charset=utf-8
+            Date: Thu, 31 Mar 2016 11:14:18 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+            test: response_headers
+          body: '{"Content-Type":"text/html","test":"response_headers"}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Response Headers
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /get:
+    get:
+      description: 'TODO: Add Description'
+      summary: GET Request
+      tags:
+      - Request Methods
+      operationId: GET Request
+      produces:
+      - application/json
+      parameters:
+      - name: test
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /get?test=123
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: GET Request
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /post:
+    post:
+      description: 'TODO: Add Description'
+      summary: POST Request
+      tags:
+      - Request Methods
+      operationId: POST Request
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /post
+          headers:
+            Content-Type: text/plain
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: POST Request
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /put:
+    put:
+      description: 'TODO: Add Description'
+      summary: PUT Request
+      tags:
+      - Request Methods
+      operationId: PUT Request
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /put
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: PUT Request
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /patch:
+    patch:
+      description: 'TODO: Add Description'
+      summary: PATCH Request
+      tags:
+      - Request Methods
+      operationId: PATCH Request
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: PATCH
+          uri: /patch
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: PATCH Request
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /delete:
+    delete:
+      description: 'TODO: Add Description'
+      summary: DELETE Request
+      tags:
+      - Request Methods
+      operationId: DELETE Request
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /delete
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: DELETE Request
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /status/200:
+    get:
+      description: 'TODO: Add Description'
+      summary: Response Status Code
+      tags:
+      - Utilities
+      operationId: Response Status Code
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /status/200
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Length: 14
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 31 Mar 2016 11:58:47 GMT
+            ETag: W/"e-1056260003"
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"status":200}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Response Status Code
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /stream/10:
+    get:
+      description: 'TODO: Add Description'
+      summary: Streamed Response
+      tags:
+      - Utilities
+      operationId: Streamed Response
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /stream/10
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Streamed Response
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /delay/3:
+    get:
+      description: 'TODO: Add Description'
+      summary: Delay Response
+      tags:
+      - Utilities
+      operationId: Delay Response
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /delay/3
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: KEYS
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Length: 13
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 31 Mar 2016 12:00:02 GMT
+            ETag: W/"d-2835810952"
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"delay":"1"}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Delay Response
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /encoding/utf8:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get UTF8 Encoded Response
+      tags:
+      - Utilities
+      operationId: Get UTF8 Encoded Response
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /encoding/utf8
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get UTF8 Encoded Response
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /gzip:
+    get:
+      description: 'TODO: Add Description'
+      summary: GZip Compressed Response
+      tags:
+      - Utilities
+      operationId: GZip Compressed Response
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /gzip
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: GZip Compressed Response
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /deflate:
+    get:
+      description: 'TODO: Add Description'
+      summary: Deflate Compressed Response
+      tags:
+      - Utilities
+      operationId: Deflate Compressed Response
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /deflate
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Deflate Compressed Response
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
