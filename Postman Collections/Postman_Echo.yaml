@@ -1,6 +1,6 @@
-swagger: 2.0
+swagger: '2.0'
 info:
-  version: 1.0
+  version: '1.0'
   title: Postman Echo
   description: >-
     Postman Echo is service you can use to test your REST clients and make sample API calls. It provides endpoints for `GET`, `POST`, `PUT`, various auth mechanisms and other utility endpoints.
