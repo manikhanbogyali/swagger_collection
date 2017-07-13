@@ -43,6 +43,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"authenticated":true}'
       security: []
       x-unitTests:
       - request:
@@ -99,6 +101,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"authenticated":true}'
       security:
       - auth: []
       x-unitTests:
@@ -156,6 +160,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"status":"pass","message":"OAuth-1.0a signature verification was successful"}'
       security:
       - auth: []
       x-unitTests:
@@ -208,6 +214,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"status":"pass","message":"Hawk Authentication successful"}'
       security: []
       x-unitTests:
       - request:
@@ -268,6 +276,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"cookies":{"foo1":"bar","foo2":"bar"}}'
       security: []
       x-unitTests:
       - request:
@@ -322,6 +332,7 @@ paths:
           description: ''
           schema:
             type: object
+          examples: {}
       security: []
       x-unitTests: []
       x-operation-settings:
@@ -344,6 +355,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"cookies":{"foo2":"bar"}}'
       security: []
       x-unitTests:
       - request:
@@ -398,6 +411,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"headers":{"host":"echo.getpostman.com","accept":"*/*","accept-encoding":"gzip, deflate, sdch","accept-language":"en-US,en;q=0.8","cache-control":"no-cache","my-sample-header":"Lorem ipsum dolor sit amet","postman-token":"3c8ea80b-f599-fba6-e0b4-a0910440e7b6","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36","x-forwarded-port":"443","x-forwarded-proto":"https"}}'
       security: []
       x-unitTests:
       - request:
@@ -459,6 +474,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"Content-Type":"text/html","test":"response_headers"}'
       security: []
       x-unitTests:
       - request:
@@ -692,6 +709,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"status":200}'
       security: []
       x-unitTests:
       - request:
@@ -775,6 +794,8 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            text/plain: '{"delay":"1"}'
       security: []
       x-unitTests:
       - request:
