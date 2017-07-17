@@ -332,7 +332,8 @@ paths:
           description: ''
           schema:
             type: object
-          examples: {}
+          examples:
+            text/plain: '{"cookies":{"foo2":"bar"}}'
       security: []
       x-unitTests: []
       x-operation-settings:
