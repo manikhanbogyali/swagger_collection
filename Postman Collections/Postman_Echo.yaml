@@ -15,6 +15,7 @@ basePath: /
 securityDefinitions:
   auth:
     type: basic
+    flow: implicit
     x-testValue: []
 schemes:
 - https
