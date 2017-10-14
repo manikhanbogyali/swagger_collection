@@ -166,8 +166,7 @@ paths:
             application/json:
               status: pass
               message: OAuth-1.0a signature verification was successful
-      security:
-      - auth: []
+      security: []
       x-unitTests:
       - request:
           method: GET
@@ -222,7 +221,8 @@ paths:
             application/json:
               status: pass
               message: Hawk Authentication successful
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
