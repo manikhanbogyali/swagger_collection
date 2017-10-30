@@ -346,7 +346,34 @@ paths:
               cookies:
                 foo2: bar
       security: []
-      x-unitTests: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /cookies/delete?foo1=
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Credentials: ''
+            Access-Control-Allow-Headers: ''
+            Access-Control-Allow-Methods: ''
+            Access-Control-Allow-Origin: ''
+            Connection: keep-alive
+            Content-Encoding: gzip
+            Content-Length: 46
+            Content-Type: application/json; charset=utf-8
+            Date: Thu, 29 Oct 2015 06:16:00 GMT
+            Server: nginx/1.6.2
+            Vary: Accept-Encoding
+            X-Powered-By: Sails <sailsjs.org>
+          body: '{"cookies":{"foo2":"bar"}}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Delete Cookies
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
