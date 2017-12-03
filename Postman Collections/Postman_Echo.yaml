@@ -16,6 +16,7 @@ securityDefinitions:
   auth:
     type: basic
     x-testValue: []
+    x-skip-client-authentication: false
 schemes:
 - https
 consumes:
