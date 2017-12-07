@@ -34,7 +34,7 @@ paths:
       summary: DigestAuth Success
       tags:
       - 'Auth: Digest'
-      operationId: DigestAuth Success
+      operationId: DigestAuthGet2
       produces:
       - application/json
       parameters:
@@ -97,7 +97,7 @@ paths:
       summary: Basic Auth
       tags:
       - 'Auth: Others'
-      operationId: Basic Auth
+      operationId: BasicAuthGet
       produces:
       - application/json
       parameters:
@@ -157,7 +157,7 @@ paths:
       summary: OAuth1.0 Verify Signature
       tags:
       - 'Auth: Others'
-      operationId: OAuth1.0 Verify Signature
+      operationId: Oauth1Get
       produces:
       - application/json
       parameters:
@@ -233,7 +233,7 @@ paths:
       summary: Hawk Auth
       tags:
       - 'Auth: Others'
-      operationId: Hawk Auth
+      operationId: AuthHawkGet
       produces:
       - application/json
       parameters: []
@@ -308,7 +308,7 @@ paths:
       summary: Set Cookies
       tags:
       - Cookies
-      operationId: Set Cookies
+      operationId: CookiesSetGet
       produces:
       - application/json
       parameters:
@@ -376,7 +376,7 @@ paths:
       summary: Delete Cookies
       tags:
       - Cookies
-      operationId: Delete Cookies
+      operationId: CookiesDeleteGet
       produces:
       - application/json
       parameters:
@@ -434,7 +434,7 @@ paths:
       summary: Get Cookies
       tags:
       - Cookies
-      operationId: Get Cookies
+      operationId: CookiesGet
       produces:
       - application/json
       parameters: []
@@ -490,7 +490,7 @@ paths:
       summary: Request Headers
       tags:
       - Headers
-      operationId: Request Headers
+      operationId: HeadersGet
       produces:
       - application/json
       parameters:
@@ -566,7 +566,7 @@ paths:
       summary: Response Headers
       tags:
       - Headers
-      operationId: Response Headers
+      operationId: ResponseHeadersGet
       produces:
       - application/json
       parameters:
@@ -634,7 +634,7 @@ paths:
       summary: GET Request
       tags:
       - Request Methods
-      operationId: GET Request
+      operationId: GetGet
       produces:
       - application/json
       parameters:
@@ -674,7 +674,7 @@ paths:
       summary: POST Request
       tags:
       - Request Methods
-      operationId: POST Request
+      operationId: PostPost
       produces:
       - application/json
       parameters:
@@ -715,7 +715,7 @@ paths:
       summary: PUT Request
       tags:
       - Request Methods
-      operationId: PUT Request
+      operationId: PutPut
       produces:
       - application/json
       parameters: []
@@ -749,7 +749,7 @@ paths:
       summary: PATCH Request
       tags:
       - Request Methods
-      operationId: PATCH Request
+      operationId: PatchPatch
       produces:
       - application/json
       parameters: []
@@ -783,7 +783,7 @@ paths:
       summary: DELETE Request
       tags:
       - Request Methods
-      operationId: DELETE Request
+      operationId: DeleteDelete
       produces:
       - application/json
       parameters: []
@@ -817,7 +817,7 @@ paths:
       summary: Response Status Code
       tags:
       - Utilities
-      operationId: Response Status Code
+      operationId: Status200Get
       produces:
       - application/json
       parameters: []
@@ -873,7 +873,7 @@ paths:
       summary: Streamed Response
       tags:
       - Utilities
-      operationId: Streamed Response
+      operationId: Stream10Get
       produces:
       - application/json
       parameters: []
@@ -915,7 +915,7 @@ paths:
       summary: Delay Response
       tags:
       - Utilities
-      operationId: Delay Response
+      operationId: Delay3Get
       produces:
       - application/json
       parameters: []
@@ -975,7 +975,7 @@ paths:
       summary: Get UTF8 Encoded Response
       tags:
       - Utilities
-      operationId: Get UTF8 Encoded Response
+      operationId: EncodingUtf8Get
       produces:
       - application/json
       parameters: []
@@ -1021,7 +1021,7 @@ paths:
       summary: GZip Compressed Response
       tags:
       - Utilities
-      operationId: GZip Compressed Response
+      operationId: GzipGet
       produces:
       - application/json
       parameters: []
@@ -1063,7 +1063,7 @@ paths:
       summary: Deflate Compressed Response
       tags:
       - Utilities
-      operationId: Deflate Compressed Response
+      operationId: DeflateGet
       produces:
       - application/json
       parameters: []
