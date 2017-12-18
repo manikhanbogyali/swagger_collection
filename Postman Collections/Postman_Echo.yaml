@@ -1100,6 +1100,7 @@ definitions:
     properties:
       authenticated:
         description: ''
+        example: true
         type: boolean
     required:
     - authenticated
@@ -1111,6 +1112,7 @@ definitions:
     properties:
       authenticated:
         description: ''
+        example: true
         type: boolean
     required:
     - authenticated
@@ -1123,9 +1125,11 @@ definitions:
     properties:
       status:
         description: ''
+        example: pass
         type: string
       message:
         description: ''
+        example: OAuth-1.0a signature verification was successful
         type: string
     required:
     - status
@@ -1139,9 +1143,11 @@ definitions:
     properties:
       status:
         description: ''
+        example: pass
         type: string
       message:
         description: ''
+        example: Hawk Authentication successful
         type: string
     required:
     - status
@@ -1156,17 +1162,25 @@ definitions:
     properties:
       cookies:
         $ref: '#/definitions/Cookies'
+        example:
+          foo1: bar
+          foo2: bar
     required:
     - cookies
   Cookies:
     title: Cookies
+    example:
+      foo1: bar
+      foo2: bar
     type: object
     properties:
       foo1:
         description: ''
+        example: bar
         type: string
       foo2:
         description: ''
+        example: bar
         type: string
     required:
     - foo1
@@ -1180,14 +1194,19 @@ definitions:
     properties:
       cookies:
         $ref: '#/definitions/Cookies7'
+        example:
+          foo2: bar
     required:
     - cookies
   Cookies7:
     title: Cookies7
+    example:
+      foo2: bar
     type: object
     properties:
       foo2:
         description: ''
+        example: bar
         type: string
     required:
     - foo2
@@ -1200,6 +1219,8 @@ definitions:
     properties:
       cookies:
         $ref: '#/definitions/Cookies7'
+        example:
+          foo2: bar
     required:
     - cookies
   RequestHeadersresponse:
@@ -1220,41 +1241,73 @@ definitions:
     properties:
       headers:
         $ref: '#/definitions/Headers'
+        example:
+          host: echo.getpostman.com
+          accept: '*/*'
+          accept-encoding: gzip, deflate, sdch
+          accept-language: en-US,en;q=0.8
+          cache-control: no-cache
+          my-sample-header: Lorem ipsum dolor sit amet
+          postman-token: 3c8ea80b-f599-fba6-e0b4-a0910440e7b6
+          user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
+          x-forwarded-port: 443
+          x-forwarded-proto: https
     required:
     - headers
   Headers:
     title: Headers
+    example:
+      host: echo.getpostman.com
+      accept: '*/*'
+      accept-encoding: gzip, deflate, sdch
+      accept-language: en-US,en;q=0.8
+      cache-control: no-cache
+      my-sample-header: Lorem ipsum dolor sit amet
+      postman-token: 3c8ea80b-f599-fba6-e0b4-a0910440e7b6
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
+      x-forwarded-port: 443
+      x-forwarded-proto: https
     type: object
     properties:
       host:
         description: ''
+        example: echo.getpostman.com
         type: string
       accept:
         description: ''
+        example: '*/*'
         type: string
       accept-encoding:
         description: ''
+        example: gzip, deflate, sdch
         type: string
       accept-language:
         description: ''
+        example: en-US,en;q=0.8
         type: string
       cache-control:
         description: ''
+        example: no-cache
         type: string
       my-sample-header:
         description: ''
+        example: Lorem ipsum dolor sit amet
         type: string
       postman-token:
         description: ''
+        example: 3c8ea80b-f599-fba6-e0b4-a0910440e7b6
         type: string
       user-agent:
         description: ''
+        example: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
         type: string
       x-forwarded-port:
         description: ''
+        example: 443
         type: string
       x-forwarded-proto:
         description: ''
+        example: https
         type: string
     required:
     - host
@@ -1276,9 +1329,11 @@ definitions:
     properties:
       Content-Type:
         description: ''
+        example: text/html
         type: string
       test:
         description: ''
+        example: response_headers
         type: string
     required:
     - Content-Type
@@ -1291,6 +1346,7 @@ definitions:
     properties:
       status:
         description: ''
+        example: 200
         type: integer
         format: int32
     required:
@@ -1303,6 +1359,7 @@ definitions:
     properties:
       delay:
         description: ''
+        example: 1
         type: string
     required:
     - delay
