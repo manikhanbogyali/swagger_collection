@@ -52,40 +52,7 @@ paths:
             application/json:
               authenticated: true
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /digest-auth
-          headers:
-            Authorization: Digest username="postman", realm="Users", nonce="ni1LiL0O37PRRhofWdCLmwFsnEtH1lew", uri="/digest-auth", response="254679099562cf07df9b6f5d8d15db44", opaque=""
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 42
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 29 Oct 2015 06:17:51 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"authenticated":true}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: DigestAuth Success
-        x-testDescription: >-
-          This endpoint sends a hashed Digest Authorization header to gain access to a valid `200 Ok` response code. In Postman, it uses the stored [global variables](https://www.getpostman.com/docs/environments#gloval-variables?source=echo-collection-app-onboarding), `echo_digest_realm` and `echo_digest_nonce`, to generate the hashed authorisation header.
-
-
-          Within Postman, for this request to successfully authenticate, running the previous request "DigestAuth Request" stores the relevant information within the global variables.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -116,36 +83,7 @@ paths:
               authenticated: true
       security:
       - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /basic-auth
-          headers:
-            Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 42
-            Content-Type: application/json; charset=utf-8
-            Date: Sat, 31 Oct 2015 06:38:25 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"authenticated":true}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Basic Auth
-        x-testDescription: "This endpoint simulates a **basic-auth** protected endpoint. \nThe endpoint accepts a default username and password and returns a status code of `200 ok` only if the same is provided. \nOtherwise it will return a status code `401 unauthorized`.\n\n> Username: `postman`\n> \n> Password: `password`\n\nTo use this endpoint, send a request with the header `Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==`. \nThe cryptic latter half of the header value is a base64 encoded concatenation of the default username and password. \nUsing Postman, to send this request, you can simply fill in the username and password in the \"Authorization\" tab and Postman will do the rest for you.\n\nTo know more about basic authentication, refer to the [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) wikipedia article.\nThe article on [authentication helpers](https://www.getpostman.com/docs/helpers#basic-auth?source=echo-collection-app-onboarding) elaborates how to use the same within the Postman app."
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -176,36 +114,7 @@ paths:
               status: pass
               message: OAuth-1.0a signature verification was successful
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /oauth1
-          headers:
-            Authorization: OAuth oauth_consumer_key="RKCGzna7bv9YD57c",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1442394747",oauth_nonce="UIGipk",oauth_version="1.0",oauth_signature="CaeyGPr2mns1WCq4Cpm5aLvz6Gs="
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 95
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 31 Mar 2016 11:06:58 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"status":"pass","message":"OAuth-1.0a signature verification was successful"}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: OAuth1.0 Verify Signature
-        x-testDescription: "OAuth1.0a is a specification that defines a protocol that can be used by one\nservice to access \"protected\" resources (endpoints) on another service. A\nmajor part of OAuth1.0 is HTTP Request Signing. This endpoint allows you to \ncheck whether the request calculation works properly in the client. \n\nThe endpoint supports the HTTP ``Authorization`` header. In case the signature\nverification fails, the endpoint provides the four debug values,\n\n* ``base_uri``\n* ``normalized_param_string``\n* ``base_string``\n* ``signing_key``\n\nFor more details about these parameters, check the [OAuth1.0a Specification](http://oauth.net/core/1.0a/)\n\nIn order to use this endpoint, you can set the following values:\n\n> Consumer Key: ``RKCGzna7bv9YD57c``\n>\n> Consumer Secret: ``D+EdQ-gs$-%@2Nu7``\n\nIf you are using Postman, also check the \"Add params to header\" and \n\"Auto add parameters\" boxes."
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -248,51 +157,7 @@ paths:
               message: Hawk Authentication successful
       security:
       - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /auth/hawk
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Type: application/json
-            Date: Thu, 31 Mar 2016 11:12:16 GMT
-            Server: nginx/1.6.2
-            Server-Authorization: Hawk mac="vRrUzDdcHu2NaNts/r4zg2xmXMdX8wPiTGTM398BDRg=", hash="qmtflETMybaZiOQ2dLT17yiRunFT5OCIxZRZ0boQaiE="
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-            transfer-encoding: chunked
-          body: '{"status":"pass","message":"Hawk Authentication successful"}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Hawk Auth
-        x-testDescription: >-
-          This endpoint is a Hawk Authentication protected endpoint. [Hawk authentication](https://github.com/hueniverse/hawk) is a widely used protocol for protecting API endpoints. One of Hawk's main goals is to enable HTTP authentication for services that do not use TLS (although it can be used in conjunction with TLS as well).
-
-
-          In order to use this endpoint, select the "Hawk Auth" helper inside Postman, and set the following values:
-
-
-          Hawk Auth ID: `dh37fgj492je`
-
-
-          Hawk Auth Key: `werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn`
-
-
-          Algorithm: `sha256`
-
-
-          The rest of the values are optional, and can be left blank. Hitting send should give you a response with a status code of 200 OK.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -333,38 +198,7 @@ paths:
                 foo1: bar
                 foo2: bar
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /cookies/set?foo1=bar1&foo2=bar
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 51
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 29 Oct 2015 06:15:28 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"cookies":{"foo1":"bar","foo2":"bar"}}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Set Cookies
-        x-testDescription: >-
-          The cookie setter endpoint accepts a list of cookies and their values as part of URL parameters of a `GET` request. These cookies are saved and can be subsequently retrieved or deleted. The response of this request returns a JSON with all cookies listed.
-
-
-          To set your own set of cookies, simply replace the URL parameters "foo1=bar1&foo2=bar2" with your own set of key-value pairs.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -395,34 +229,7 @@ paths:
               cookies:
                 foo2: bar
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /cookies/delete?foo1=
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 46
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 29 Oct 2015 06:16:00 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"cookies":{"foo2":"bar"}}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Delete Cookies
-        x-testDescription: One or more cookies that has been set for this domain can be deleted by providing the cookie names as part of the URL parameter. The response of this request is a JSON containing the list of currently set cookies.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -448,34 +255,7 @@ paths:
               cookies:
                 foo2: bar
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /cookies
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 46
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 29 Oct 2015 06:16:29 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"cookies":{"foo2":"bar"}}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Get Cookies
-        x-testDescription: Use this endpoint to get a list of all cookies that are stored with respect to this domain. Whatever key-value pairs that has been previously set by calling the "Set Cookies" endpoint, will be returned as response JSON.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -518,39 +298,7 @@ paths:
                 x-forwarded-port: 443
                 x-forwarded-proto: https
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /headers
-          headers:
-            my-sample-header: Lorem ipsum dolor sit amet
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 342
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 31 Mar 2016 11:14:00 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"headers":{"host":"echo.getpostman.com","accept":"*/*","accept-encoding":"gzip, deflate, sdch","accept-language":"en-US,en;q=0.8","cache-control":"no-cache","my-sample-header":"Lorem ipsum dolor sit amet","postman-token":"3c8ea80b-f599-fba6-e0b4-a0910440e7b6","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36","x-forwarded-port":"443","x-forwarded-proto":"https"}}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Request Headers
-        x-testDescription: >-
-          A `GET` request to this endpoint returns the list of all request headers as part of the response JSON.
-
-          In Postman, sending your own set of headers through the [Headers tab](https://www.getpostman.com/docs/requests#headers?source=echo-collection-app-onboarding) will reveal the headers as part of the response.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -590,39 +338,7 @@ paths:
               Content-Type: text/html
               test: response_headers
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /response-headers?Content-Type=text/html&test=response_headers
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Encoding: gzip
-            Content-Length: 71
-            Content-Type: text/html; charset=utf-8
-            Date: Thu, 31 Mar 2016 11:14:18 GMT
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-            test: response_headers
-          body: '{"Content-Type":"text/html","test":"response_headers"}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Response Headers
-        x-testDescription: >-
-          This endpoint causes the server to send custom set of response headers. Providing header values as part of the URL parameters of a `GET` request to this endpoint returns the same as part of response header.
-
-
-          To send your own set of headers, simply add or replace the the URL parameters with your own set.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -830,34 +546,7 @@ paths:
             application/json:
               status: 200
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /status/200
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Length: 14
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 31 Mar 2016 11:58:47 GMT
-            ETag: W/"e-1056260003"
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"status":200}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Response Status Code
-        x-testDescription: "This endpoint allows one to instruct the server which status code to respond with.\n\nEvery response is accompanied by a status code. The status code provides a summary of the nature of response sent by the server. For example, a status code of `200` means everything is okay with the response and a code of `404` implies that the requested URL does not exist on server. \nA list of all valid HTTP status code can be found at the [List of Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) wikipedia article. When using Postman, the response status code is described for easy reference.\n\nNote that if an invalid status code is requested to be sent, the server returns a status code of `400 Bad Request`."
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -928,38 +617,7 @@ paths:
             application/json:
               delay: 1
       security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /delay/3
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: RAW
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers:
-            Access-Control-Allow-Credentials: ''
-            Access-Control-Allow-Headers: ''
-            Access-Control-Allow-Methods: ''
-            Access-Control-Allow-Origin: ''
-            Connection: keep-alive
-            Content-Length: 13
-            Content-Type: application/json; charset=utf-8
-            Date: Thu, 31 Mar 2016 12:00:02 GMT
-            ETag: W/"d-2835810952"
-            Server: nginx/1.6.2
-            Vary: Accept-Encoding
-            X-Powered-By: Sails <sailsjs.org>
-          body: '{"delay":"1"}'
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Delay Response
-        x-testDescription: >-
-          Using this endpoint one can configure how long it takes for the server to come back with a response. Appending a number to the URL defines the time (in seconds) the server will wait before responding.
-
-
-          Note that a maximum delay of 10 seconds is accepted by the server.
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
