@@ -7,9 +7,6 @@ info:
 
 
     The documentation for the endpoints as well as example responses can be found at [https://echo.getpostman.com](https://echo.getpostman.com?source=echo-collection-app-onboarding)
-  license:
-    name: MIT
-    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
 host: echo.getpostman.com
 basePath: /
 securityDefinitions:
