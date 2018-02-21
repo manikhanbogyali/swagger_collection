@@ -44,7 +44,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/DigestauthSuccessresponse'
+            $ref: '#/definitions/200'
           examples:
             application/json:
               authenticated: true
@@ -107,7 +107,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/BasicAuthresponse'
+            $ref: '#/definitions/200'
           examples:
             application/json:
               authenticated: true
@@ -167,7 +167,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/Oauth1.0VerifySignatureresponse'
+            $ref: '#/definitions/Success'
           examples:
             application/json:
               status: pass
@@ -238,7 +238,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/HawkAuthresponse'
+            $ref: '#/definitions/Success'
           examples:
             application/json:
               status: pass
@@ -323,7 +323,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/SetCookiesresponse'
+            $ref: '#/definitions/Cookies'
           examples:
             application/json:
               cookies:
@@ -386,7 +386,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/DeleteCookiesresponse'
+            $ref: '#/definitions/CookiesResponse'
           examples:
             application/json:
               cookies:
@@ -439,7 +439,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/GetCookiesresponse'
+            $ref: '#/definitions/Cookies8'
           examples:
             application/json:
               cookies:
@@ -500,7 +500,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/RequestHeadersresponse'
+            $ref: '#/definitions/MySampleHeader'
           examples:
             application/json:
               headers:
@@ -581,7 +581,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/ResponseHeadersresponse'
+            $ref: '#/definitions/ResponseHeaders'
           examples:
             application/json:
               Content-Type: text/html
@@ -822,7 +822,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/ResponseStatusCoderesponse'
+            $ref: '#/definitions/20013'
           examples:
             application/json:
               status: 200
@@ -920,7 +920,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/DelayResponseresponse'
+            $ref: '#/definitions/SampleDelayResponse'
           examples:
             application/json:
               delay: 1
@@ -1089,8 +1089,8 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
 definitions:
-  DigestauthSuccessresponse:
-    title: DigestAuth SuccessResponse
+  200:
+    title: 200
     example:
       authenticated: true
     type: object
@@ -1101,20 +1101,8 @@ definitions:
         type: boolean
     required:
     - authenticated
-  BasicAuthresponse:
-    title: Basic AuthResponse
-    example:
-      authenticated: true
-    type: object
-    properties:
-      authenticated:
-        description: ''
-        example: true
-        type: boolean
-    required:
-    - authenticated
-  Oauth1.0VerifySignatureresponse:
-    title: OAuth1.0 Verify SignatureResponse
+  Success:
+    title: Success
     example:
       status: pass
       message: OAuth-1.0a signature verification was successful
@@ -1131,26 +1119,8 @@ definitions:
     required:
     - status
     - message
-  HawkAuthresponse:
-    title: Hawk AuthResponse
-    example:
-      status: pass
-      message: Hawk Authentication successful
-    type: object
-    properties:
-      status:
-        description: ''
-        example: pass
-        type: string
-      message:
-        description: ''
-        example: Hawk Authentication successful
-        type: string
-    required:
-    - status
-    - message
-  SetCookiesresponse:
-    title: Set CookiesResponse
+  Cookies:
+    title: Cookies
     example:
       cookies:
         foo1: bar
@@ -1158,11 +1128,11 @@ definitions:
     type: object
     properties:
       cookies:
-        $ref: '#/definitions/Cookies'
+        $ref: '#/definitions/Cookies5'
     required:
     - cookies
-  Cookies:
-    title: Cookies
+  Cookies5:
+    title: Cookies5
     example:
       foo1: bar
       foo2: bar
@@ -1179,8 +1149,8 @@ definitions:
     required:
     - foo1
     - foo2
-  DeleteCookiesresponse:
-    title: Delete CookiesResponse
+  CookiesResponse:
+    title: Cookies Response
     example:
       cookies:
         foo2: bar
@@ -1202,8 +1172,8 @@ definitions:
         type: string
     required:
     - foo2
-  GetCookiesresponse:
-    title: Get CookiesResponse
+  Cookies8:
+    title: Cookies8
     example:
       cookies:
         foo2: bar
@@ -1213,8 +1183,8 @@ definitions:
         $ref: '#/definitions/Cookies7'
     required:
     - cookies
-  RequestHeadersresponse:
-    title: Request HeadersResponse
+  MySampleHeader:
+    title: my-sample-header
     example:
       headers:
         host: echo.getpostman.com
@@ -1299,8 +1269,8 @@ definitions:
     - user-agent
     - x-forwarded-port
     - x-forwarded-proto
-  ResponseHeadersresponse:
-    title: Response HeadersResponse
+  ResponseHeaders:
+    title: Response headers
     example:
       Content-Type: text/html
       test: response_headers
@@ -1317,8 +1287,8 @@ definitions:
     required:
     - Content-Type
     - test
-  ResponseStatusCoderesponse:
-    title: Response Status CodeResponse
+  20013:
+    title: 20013
     example:
       status: 200
     type: object
@@ -1330,8 +1300,8 @@ definitions:
         format: int32
     required:
     - status
-  DelayResponseresponse:
-    title: Delay ResponseResponse
+  SampleDelayResponse:
+    title: sample delay response
     example:
       delay: 1
     type: object
