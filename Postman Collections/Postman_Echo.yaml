@@ -34,12 +34,7 @@ paths:
       operationId: DigestAuthGet2
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
@@ -48,13 +43,12 @@ paths:
           examples:
             application/json:
               authenticated: true
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /digest-auth
-          headers:
-            Authorization: Digest username="postman", realm="Users", nonce="ni1LiL0O37PRRhofWdCLmwFsnEtH1lew", uri="/digest-auth", response="254679099562cf07df9b6f5d8d15db44", opaque=""
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW
@@ -97,12 +91,7 @@ paths:
       operationId: BasicAuthGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
@@ -117,8 +106,6 @@ paths:
       - request:
           method: GET
           uri: /basic-auth
-          headers:
-            Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW
@@ -157,12 +144,7 @@ paths:
       operationId: Oauth1Get
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
@@ -172,13 +154,12 @@ paths:
             application/json:
               status: pass
               message: OAuth-1.0a signature verification was successful
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /oauth1
-          headers:
-            Authorization: OAuth oauth_consumer_key="RKCGzna7bv9YD57c",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1442394747",oauth_nonce="UIGipk",oauth_version="1.0",oauth_signature="CaeyGPr2mns1WCq4Cpm5aLvz6Gs="
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW
@@ -329,7 +310,8 @@ paths:
               cookies:
                 foo1: bar
                 foo2: bar
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -391,7 +373,8 @@ paths:
             application/json:
               cookies:
                 foo2: bar
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -444,7 +427,8 @@ paths:
             application/json:
               cookies:
                 foo2: bar
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -514,7 +498,8 @@ paths:
                 user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
                 x-forwarded-port: 443
                 x-forwarded-proto: https
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -586,7 +571,8 @@ paths:
             application/json:
               Content-Type: text/html
               test: response_headers
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -644,7 +630,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -683,7 +670,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
@@ -719,7 +707,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
@@ -753,7 +742,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PATCH
@@ -787,7 +777,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
@@ -826,7 +817,8 @@ paths:
           examples:
             application/json:
               status: 200
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -877,7 +869,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -924,7 +917,8 @@ paths:
           examples:
             application/json:
               delay: 1
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -979,7 +973,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -1025,7 +1020,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
@@ -1067,7 +1063,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
