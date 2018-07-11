@@ -667,6 +667,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -678,6 +684,10 @@ paths:
           uri: /post
           headers:
             Content-Type: text/plain
+          body: >-
+            Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium. Praesent neque quam, tincidunt nec leo eget, rutrum vehicula magna.
+
+            Maecenas consequat elementum elit, id semper sem tristique et. Integer pulvinar enim quis consectetur interdum volutpat.
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -703,7 +713,13 @@ paths:
       operationId: PutPut
       produces:
       - application/json
-      parameters: []
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -713,6 +729,10 @@ paths:
       - request:
           method: PUT
           uri: /put
+          body: >-
+            Etiam mi lacus, cursus vitae felis et, blandit pellentesque neque. Vestibulum eget nisi a tortor commodo dignissim.
+
+            Quisque ipsum ligula, faucibus a felis a, commodo elementum nisl. Mauris vulputate sapien et tincidunt viverra. Donec vitae velit nec metus.
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -738,7 +758,13 @@ paths:
       operationId: PatchPatch
       produces:
       - application/json
-      parameters: []
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -748,6 +774,10 @@ paths:
       - request:
           method: PATCH
           uri: /patch
+          body: >-
+            Curabitur auctor, elit nec pulvinar porttitor, ex augue condimentum enim, eget suscipit urna felis quis neque.
+
+            Suspendisse sit amet luctus massa, nec venenatis mi. Suspendisse tincidunt massa at nibh efficitur fringilla. Nam quis congue mi. Etiam volutpat.
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -773,7 +803,13 @@ paths:
       operationId: DeleteDelete
       produces:
       - application/json
-      parameters: []
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -783,6 +819,7 @@ paths:
       - request:
           method: DELETE
           uri: /delete
+          body: "Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus. \nMorbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed."
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
