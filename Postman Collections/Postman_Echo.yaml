@@ -43,8 +43,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /basic-auth:
     get:
       description: "This endpoint simulates a **basic-auth** protected endpoint. \nThe endpoint accepts a default username and password and returns a status code of `200 ok` only if the same is provided. \nOtherwise it will return a status code `401 unauthorized`.\n\n> Username: `postman`\n> \n> Password: `password`\n\nTo use this endpoint, send a request with the header `Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==`. \nThe cryptic latter half of the header value is a base64 encoded concatenation of the default username and password. \nUsing Postman, to send this request, you can simply fill in the username and password in the \"Authorization\" tab and Postman will do the rest for you.\n\nTo know more about basic authentication, refer to the [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) wikipedia article.\nThe article on [authentication helpers](https://www.getpostman.com/docs/helpers#basic-auth?source=echo-collection-app-onboarding) elaborates how to use the same within the Postman app."
@@ -55,12 +53,7 @@ paths:
       deprecated: false
       produces:
       - application/json; charset=utf-8
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
@@ -103,8 +96,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /oauth1:
     get:
       description: "OAuth1.0a is a specification that defines a protocol that can be used by one\nservice to access \"protected\" resources (endpoints) on another service. A\nmajor part of OAuth1.0 is HTTP Request Signing. This endpoint allows you to \ncheck whether the request calculation works properly in the client. \n\nThe endpoint supports the HTTP ``Authorization`` header. In case the signature\nverification fails, the endpoint provides the four debug values,\n\n* ``base_uri``\n* ``normalized_param_string``\n* ``base_string``\n* ``signing_key``\n\nFor more details about these parameters, check the [OAuth1.0a Specification](http://oauth.net/core/1.0a/)\n\nIn order to use this endpoint, you can set the following values:\n\n> Consumer Key: ``RKCGzna7bv9YD57c``\n>\n> Consumer Secret: ``D+EdQ-gs$-%@2Nu7``\n\nIf you are using Postman, also check the \"Add params to header\" and \n\"Auto add parameters\" boxes."
@@ -164,8 +155,7 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
+      security: []
   /auth/hawk:
     get:
       description: >-
@@ -239,8 +229,6 @@ paths:
             transfer-encoding:
               type: string
               default: chunked
-      security:
-      - auth: []
   /cookies/set:
     get:
       description: >-
@@ -310,8 +298,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /cookies/delete:
     get:
       description: One or more cookies that has been set for this domain can be deleted by providing the cookie names as part of the URL parameter. The response of this request is a JSON containing the list of currently set cookies.
@@ -371,8 +357,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /cookies:
     get:
       description: Use this endpoint to get a list of all cookies that are stored with respect to this domain. Whatever key-value pairs that has been previously set by calling the "Set Cookies" endpoint, will be returned as response JSON.
@@ -427,8 +411,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /headers:
     get:
       description: >-
@@ -500,8 +482,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /response-headers:
     get:
       description: >-
@@ -573,8 +553,6 @@ paths:
             test:
               type: string
               default: response_headers
-      security:
-      - auth: []
   /get:
     get:
       description: "The HTTP `GET` request method is meant to retrieve data from a server. The data\nis identified by a unique URI (Uniform Resource Identifier). \n\nA `GET` request can pass parameters to the server using \"Query String \nParameters\". For example, in the following request,\n\n> http://example.com/hi/there?hand=wave\n\nThe parameter \"hand\" has the value \"wave\".\n\nThis endpoint echoes the HTTP headers, request parameters and the complete\nURI requested."
@@ -596,8 +574,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /post:
     post:
       description: "The HTTP `POST` request method is meant to transfer data to a server \n(and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `POST` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following request,\n\n> POST /hi/there?hand=wave\n>\n> <request-body>\n\nThe parameter \"hand\" has the value \"wave\". The request body can be in multiple\nformats. These formats are defined by the MIME type of the request. The MIME \nType can be set using the ``Content-Type`` HTTP header. The most commonly used \nMIME types are:\n\n* `multipart/form-data`\n* `application/x-www-form-urlencoded`\n* `application/json`\n\nThis endpoint echoes the HTTP headers, request parameters, the contents of\nthe request body and the complete URI requested."
@@ -624,8 +600,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /put:
     put:
       description: "The HTTP `PUT` request method is similar to HTTP `POST`. It too is meant to \ntransfer data to a server (and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `PUT` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following \nraw HTTP request,\n\n> PUT /hi/there?hand=wave\n>\n> <request-body>\n\n\n"
@@ -647,8 +621,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /patch:
     patch:
       description: "The HTTP `PATCH` method is used to update resources on a server. The exact\nuse of `PATCH` requests depends on the server in question. There are a number\nof server implementations which handle `PATCH` differently. Technically, \n`PATCH` supports both Query String parameters and a Request Body.\n\nThis endpoint accepts an HTTP `PATCH` request and provides debug information\nsuch as the HTTP headers, Query String arguments, and the Request Body."
@@ -670,8 +642,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /delete:
     delete:
       description: "The HTTP `DELETE` method is used to delete resources on a server. The exact\nuse of `DELETE` requests depends on the server implementation. In general, \n`DELETE` requests support both, Query String parameters as well as a Request \nBody.\n\nThis endpoint accepts an HTTP `DELETE` request and provides debug information\nsuch as the HTTP headers, Query String arguments, and the Request Body."
@@ -693,8 +663,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /status/200:
     get:
       description: "This endpoint allows one to instruct the server which status code to respond with.\n\nEvery response is accompanied by a status code. The status code provides a summary of the nature of response sent by the server. For example, a status code of `200` means everything is okay with the response and a code of `404` implies that the requested URL does not exist on server. \nA list of all valid HTTP status code can be found at the [List of Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) wikipedia article. When using Postman, the response status code is described for easy reference.\n\nNote that if an invalid status code is requested to be sent, the server returns a status code of `400 Bad Request`."
@@ -748,8 +716,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /stream/10:
     get:
       description: >-
@@ -769,8 +735,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /delay/3:
     get:
       description: >-
@@ -828,8 +792,6 @@ paths:
             X-Powered-By:
               type: string
               default: Sails <sailsjs.org>
-      security:
-      - auth: []
   /encoding/utf8:
     get:
       description: >-
@@ -849,8 +811,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /gzip:
     get:
       description: >-
@@ -874,8 +834,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
   /deflate:
     get:
       description: "This endpoint returns the response using [deflate compression algoritm](https://en.wikipedia.org/wiki/DEFLATE). \nThe uncompressed response is a JSON string containing the details of the request sent by the client. For this endpoint to work, one should request with `Accept-encoding` header containing `deflate` as part of its value. Postman supports gzip, deflate and SDCH decoding and automatically sends them as part of the request.\n\nHTTP Compression allows the server to send responses in a compressed format, which is uncompressed by the client before processing. This reduces network bandwidth consumption at the cost of increase in CPU usage.\nTo know more about this, refer the [HTTP Compression](https://en.wikipedia.org/wiki/HTTP_compression) wikipedia article."
@@ -891,8 +849,6 @@ paths:
         200:
           description: ''
           headers: {}
-      security:
-      - auth: []
 definitions:
   200:
     title: 200
@@ -1077,6 +1033,8 @@ definitions:
         type: string
     required:
     - delay
+security:
+- auth: []
 tags:
 - name: 'Auth: Digest'
   description: >-
