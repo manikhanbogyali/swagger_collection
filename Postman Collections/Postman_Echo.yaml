@@ -34,7 +34,7 @@ paths:
       summary: DigestAuth Request
       tags:
       - 'Auth: Digest'
-      operationId: DigestAuthGet
+      operationId: DigestAuthRequest
       deprecated: false
       produces:
       - application/json
@@ -49,7 +49,7 @@ paths:
       summary: Basic Auth
       tags:
       - 'Auth: Others'
-      operationId: BasicAuthGet
+      operationId: BasicAuth
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -102,7 +102,7 @@ paths:
       summary: OAuth1.0 Verify Signature
       tags:
       - 'Auth: Others'
-      operationId: Oauth1Get
+      operationId: OAuth1.0VerifySignature
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -178,7 +178,7 @@ paths:
       summary: Hawk Auth
       tags:
       - 'Auth: Others'
-      operationId: AuthHawkGet
+      operationId: HawkAuth
       deprecated: false
       produces:
       - application/json
@@ -239,7 +239,7 @@ paths:
       summary: Set Cookies
       tags:
       - Cookies
-      operationId: CookiesSetGet
+      operationId: SetCookies
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -304,7 +304,7 @@ paths:
       summary: Delete Cookies
       tags:
       - Cookies
-      operationId: CookiesDeleteGet
+      operationId: DeleteCookies
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -363,7 +363,7 @@ paths:
       summary: Get Cookies
       tags:
       - Cookies
-      operationId: CookiesGet
+      operationId: GetCookies
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -420,7 +420,7 @@ paths:
       summary: Request Headers
       tags:
       - Headers
-      operationId: HeadersGet
+      operationId: RequestHeaders
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -492,7 +492,7 @@ paths:
       summary: Response Headers
       tags:
       - Headers
-      operationId: ResponseHeadersGet
+      operationId: ResponseHeaders
       deprecated: false
       produces:
       - text/html; charset=utf-8
@@ -559,7 +559,7 @@ paths:
       summary: GET Request
       tags:
       - Request Methods
-      operationId: GetGet
+      operationId: GETRequest
       deprecated: false
       produces:
       - application/json
@@ -580,7 +580,7 @@ paths:
       summary: POST Request
       tags:
       - Request Methods
-      operationId: PostPost
+      operationId: POSTRequest
       deprecated: false
       produces:
       - application/json
@@ -606,7 +606,7 @@ paths:
       summary: PUT Request
       tags:
       - Request Methods
-      operationId: PutPut
+      operationId: PUTRequest
       deprecated: false
       produces:
       - application/json
@@ -627,7 +627,7 @@ paths:
       summary: PATCH Request
       tags:
       - Request Methods
-      operationId: PatchPatch
+      operationId: PATCHRequest
       deprecated: false
       produces:
       - application/json
@@ -648,7 +648,7 @@ paths:
       summary: DELETE Request
       tags:
       - Request Methods
-      operationId: DeleteDelete
+      operationId: DELETERequest
       deprecated: false
       produces:
       - application/json
@@ -669,7 +669,7 @@ paths:
       summary: Response Status Code
       tags:
       - Utilities
-      operationId: Status200Get
+      operationId: ResponseStatusCode
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -726,7 +726,7 @@ paths:
       summary: Streamed Response
       tags:
       - Utilities
-      operationId: Stream10Get
+      operationId: StreamedResponse
       deprecated: false
       produces:
       - application/json
@@ -745,7 +745,7 @@ paths:
       summary: Delay Response
       tags:
       - Utilities
-      operationId: Delay3Get
+      operationId: DelayResponse
       deprecated: false
       produces:
       - application/json; charset=utf-8
@@ -802,7 +802,7 @@ paths:
       summary: Get UTF8 Encoded Response
       tags:
       - Utilities
-      operationId: EncodingUtf8Get
+      operationId: GetUTF8EncodedResponse
       deprecated: false
       produces:
       - application/json
@@ -825,7 +825,7 @@ paths:
       summary: GZip Compressed Response
       tags:
       - Utilities
-      operationId: GzipGet
+      operationId: GZipCompressedResponse
       deprecated: false
       produces:
       - application/json
@@ -840,7 +840,7 @@ paths:
       summary: Deflate Compressed Response
       tags:
       - Utilities
-      operationId: DeflateGet
+      operationId: DeflateCompressedResponse
       deprecated: false
       produces:
       - application/json
