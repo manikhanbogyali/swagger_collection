@@ -595,6 +595,10 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium. Praesent neque quam, tincidunt nec leo eget, rutrum vehicula magna.
+
+            Maecenas consequat elementum elit, id semper sem tristique et. Integer pulvinar enim quis consectetur interdum volutpat.
           type: string
       responses:
         200:
@@ -616,6 +620,10 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            Etiam mi lacus, cursus vitae felis et, blandit pellentesque neque. Vestibulum eget nisi a tortor commodo dignissim.
+
+            Quisque ipsum ligula, faucibus a felis a, commodo elementum nisl. Mauris vulputate sapien et tincidunt viverra. Donec vitae velit nec metus.
           type: string
       responses:
         200:
@@ -637,6 +645,10 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            Curabitur auctor, elit nec pulvinar porttitor, ex augue condimentum enim, eget suscipit urna felis quis neque.
+
+            Suspendisse sit amet luctus massa, nec venenatis mi. Suspendisse tincidunt massa at nibh efficitur fringilla. Nam quis congue mi. Etiam volutpat.
           type: string
       responses:
         200:
@@ -658,6 +670,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: "Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus. \nMorbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed."
           type: string
       responses:
         200:
