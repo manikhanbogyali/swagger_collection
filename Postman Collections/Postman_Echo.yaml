@@ -584,6 +584,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - text/plain
       parameters:
       - name: Content-Type
         in: header
