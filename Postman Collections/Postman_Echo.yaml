@@ -58,7 +58,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/200'
+            $ref: '#/definitions/m200'
           examples:
             application/json; charset=utf-8:
               authenticated: true
@@ -693,7 +693,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/2002'
+            $ref: '#/definitions/m2002'
           examples:
             application/json; charset=utf-8:
               status: 200
@@ -865,8 +865,8 @@ paths:
           description: ''
           headers: {}
 definitions:
-  200:
-    title: 200
+  m200:
+    title: m200
     example:
       authenticated: true
     type: object
@@ -1027,8 +1027,8 @@ definitions:
     required:
     - Content-Type
     - test
-  2002:
-    title: 2002
+  m2002:
+    title: m2002
     example:
       status: 200
     type: object
