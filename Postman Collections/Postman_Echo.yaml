@@ -56,25 +56,13 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/m200'
           examples:
             application/json; charset=utf-8:
               authenticated: true
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -114,7 +102,7 @@ paths:
         description: ''
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/Success'
           examples:
@@ -122,18 +110,6 @@ paths:
               status: pass
               message: OAuth-1.0a signature verification was successful
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -185,7 +161,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/Success'
           examples:
@@ -193,18 +169,6 @@ paths:
               status: pass
               message: Hawk Authentication successful
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -256,7 +220,7 @@ paths:
         description: ''
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/Cookies'
           examples:
@@ -265,18 +229,6 @@ paths:
                 foo1: bar
                 foo2: bar
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -316,7 +268,7 @@ paths:
         description: ''
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/CookiesResponse'
           examples:
@@ -324,18 +276,6 @@ paths:
               cookies:
                 foo2: bar
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -370,7 +310,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/Cookies3'
           examples:
@@ -378,18 +318,6 @@ paths:
               cookies:
                 foo2: bar
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -432,7 +360,7 @@ paths:
         description: ''
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/my-sample-header'
           examples:
@@ -449,18 +377,6 @@ paths:
                 x-forwarded-port: 443
                 x-forwarded-proto: https
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -509,7 +425,7 @@ paths:
         description: ''
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/Responseheaders'
           examples:
@@ -517,18 +433,6 @@ paths:
               Content-Type: text/html
               test: response_headers
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -691,25 +595,13 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/m2002'
           examples:
             application/json; charset=utf-8:
               status: 200
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
@@ -767,25 +659,13 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/sampledelayresponse'
           examples:
             application/json; charset=utf-8:
               delay: 1
           headers:
-            Access-Control-Allow-Credentials:
-              type: string
-              default: ''
-            Access-Control-Allow-Headers:
-              type: string
-              default: ''
-            Access-Control-Allow-Methods:
-              type: string
-              default: ''
-            Access-Control-Allow-Origin:
-              type: string
-              default: ''
             Connection:
               type: string
               default: keep-alive
