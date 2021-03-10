@@ -71,7 +71,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 42
+              default: '42'
             Date:
               type: string
               default: Sat, 31 Oct 2015 06:38:25 GMT
@@ -118,7 +118,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 95
+              default: '95'
             Date:
               type: string
               default: Thu, 31 Mar 2016 11:06:58 GMT
@@ -237,7 +237,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 51
+              default: '51'
             Date:
               type: string
               default: Thu, 29 Oct 2015 06:15:28 GMT
@@ -284,7 +284,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 46
+              default: '46'
             Date:
               type: string
               default: Thu, 29 Oct 2015 06:16:00 GMT
@@ -326,7 +326,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 46
+              default: '46'
             Date:
               type: string
               default: Thu, 29 Oct 2015 06:16:29 GMT
@@ -374,7 +374,7 @@ paths:
                 my-sample-header: Lorem ipsum dolor sit amet
                 postman-token: 3c8ea80b-f599-fba6-e0b4-a0910440e7b6
                 user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
-                x-forwarded-port: 443
+                x-forwarded-port: '443'
                 x-forwarded-proto: https
           headers:
             Connection:
@@ -385,7 +385,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 342
+              default: '342'
             Date:
               type: string
               default: Thu, 31 Mar 2016 11:14:00 GMT
@@ -441,7 +441,7 @@ paths:
               default: gzip
             Content-Length:
               type: string
-              default: 71
+              default: '71'
             Date:
               type: string
               default: Thu, 31 Mar 2016 11:14:18 GMT
@@ -607,7 +607,7 @@ paths:
               default: keep-alive
             Content-Length:
               type: string
-              default: 14
+              default: '14'
             Date:
               type: string
               default: Thu, 31 Mar 2016 11:58:47 GMT
@@ -664,14 +664,14 @@ paths:
             $ref: '#/definitions/sampledelayresponse'
           examples:
             application/json; charset=utf-8:
-              delay: 1
+              delay: '1'
           headers:
             Connection:
               type: string
               default: keep-alive
             Content-Length:
               type: string
-              default: 13
+              default: '13'
             Date:
               type: string
               default: Thu, 31 Mar 2016 12:00:02 GMT
@@ -839,7 +839,7 @@ definitions:
         my-sample-header: Lorem ipsum dolor sit amet
         postman-token: 3c8ea80b-f599-fba6-e0b4-a0910440e7b6
         user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
-        x-forwarded-port: 443
+        x-forwarded-port: '443'
         x-forwarded-proto: https
     type: object
     properties:
@@ -858,7 +858,7 @@ definitions:
       my-sample-header: Lorem ipsum dolor sit amet
       postman-token: 3c8ea80b-f599-fba6-e0b4-a0910440e7b6
       user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
-      x-forwarded-port: 443
+      x-forwarded-port: '443'
       x-forwarded-proto: https
     type: object
     properties:
@@ -921,7 +921,7 @@ definitions:
   sampledelayresponse:
     title: sampledelayresponse
     example:
-      delay: 1
+      delay: '1'
     type: object
     properties:
       delay:
