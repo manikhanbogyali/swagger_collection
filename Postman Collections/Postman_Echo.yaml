@@ -40,7 +40,7 @@ paths:
       - application/json
       parameters: []
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /basic-auth:
@@ -55,7 +55,7 @@ paths:
       - application/json; charset=utf-8
       parameters: []
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/m200'
@@ -101,7 +101,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/Success'
@@ -160,7 +160,7 @@ paths:
       - application/json
       parameters: []
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/Success'
@@ -219,7 +219,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/Cookies'
@@ -267,7 +267,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/CookiesResponse'
@@ -309,7 +309,7 @@ paths:
       - application/json; charset=utf-8
       parameters: []
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/Cookies3'
@@ -359,7 +359,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/my-sample-header'
@@ -424,7 +424,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/Responseheaders'
@@ -475,7 +475,7 @@ paths:
         format: int32
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /post:
@@ -507,7 +507,7 @@ paths:
             Maecenas consequat elementum elit, id semper sem tristique et. Integer pulvinar enim quis consectetur interdum volutpat.
           type: string
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /put:
@@ -532,7 +532,7 @@ paths:
             Quisque ipsum ligula, faucibus a felis a, commodo elementum nisl. Mauris vulputate sapien et tincidunt viverra. Donec vitae velit nec metus.
           type: string
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /patch:
@@ -557,7 +557,7 @@ paths:
             Suspendisse sit amet luctus massa, nec venenatis mi. Suspendisse tincidunt massa at nibh efficitur fringilla. Nam quis congue mi. Etiam volutpat.
           type: string
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /delete:
@@ -579,7 +579,7 @@ paths:
           example: "Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus. \nMorbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed."
           type: string
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /status/200:
@@ -594,7 +594,7 @@ paths:
       - application/json; charset=utf-8
       parameters: []
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/m2002'
@@ -639,7 +639,7 @@ paths:
       - application/json
       parameters: []
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /delay/3:
@@ -658,7 +658,7 @@ paths:
       - application/json; charset=utf-8
       parameters: []
       responses:
-        200:
+        '200':
           description: OK
           schema:
             $ref: '#/definitions/sampledelayresponse'
@@ -703,7 +703,7 @@ paths:
       - application/json
       parameters: []
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /gzip:
@@ -726,7 +726,7 @@ paths:
       - application/json
       parameters: []
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /deflate:
@@ -741,7 +741,7 @@ paths:
       - application/json
       parameters: []
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
 definitions:
