@@ -493,7 +493,9 @@ paths:
       parameters:
       - name: Content-Type
         in: header
-        required: true
+        required: false
+        enum:
+        - text/plain
         type: string
         description: ''
       - name: Body
